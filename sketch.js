@@ -33,6 +33,9 @@ function draw(){
 function writePosition(x,y){
 
     database.ref("Ball/Position").set({
+        
+        
+        
         'x' : position.x + x,
         'y' : position.y +y
     })
@@ -43,4 +46,10 @@ function readPosition(data){
     console.log(position)
     hypnoticBall.x = position.x;
     hypnoticBall.y = position.y
+}
+
+function showError(){
+
+console.log("Error in writing to the Database")
+
 }
